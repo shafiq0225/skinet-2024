@@ -1,10 +1,11 @@
+@if (products) {
 <div class="flex flex-col gap-3">
     <div class="flex justify-between">
-        <mat-paginator class="bg-white" (page)="handlePageEvent($event)" [length]="products?.value?.count"
+        <mat-paginator class="bg-white" (page)="handlePageEvent($event)" [length]="products.value.count"
             [pageSize]="shopParams.pageSize" [showFirstLastButtons]="true" [pageSizeOptions]="pageSizeOptions"
             [pageIndex]="shopParams.pageNumber - 1" aria-label="select a page">
         </mat-paginator>
-        
+
         <form #searchForm="ngForm" (ngSubmit)="onSearchChange()"
             class="relative flex items-center w-full max-w-md mx-4">
             <input type="search"
@@ -25,7 +26,7 @@
         </div>
     </div>
     <div class="grid grid-cols-5 gap-4">
-        @for (product of products?.value?.data; track product.id) {
+        @for (product of products.value.data; track product.id) {
         <app-product-item [product]="product"></app-product-item>
         }
     </div>
@@ -40,3 +41,4 @@
         }
     </mat-selection-list>
 </mat-menu>
+}
