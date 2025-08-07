@@ -7,6 +7,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatDivider } from '@angular/material/divider';
 import { MatInput } from '@angular/material/input';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-product-details',
@@ -16,7 +17,8 @@ import { MatInput } from '@angular/material/input';
     MatFormField,
     MatLabel,
     MatInput,
-    MatDivider
+    MatDivider,
+    MatButton
   ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.scss'
