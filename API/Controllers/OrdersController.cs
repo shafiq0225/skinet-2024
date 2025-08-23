@@ -59,7 +59,7 @@ namespace API.Controllers
                 Discount = orderDto.Discount,
                 PaymentSummary = orderDto.PaymentSummary,
                 PaymentIntentId = cart.PaymentIntentId,
-                BuyerEmail = email
+                BuyerEmail = email,
             };
 
             unit.Repository<Order>().Add(order);
